@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tab Saver Pro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Tab Saver Pro</h1>
+      <button id="saveCurrentTab" class="btn primary">Save Current Tab</button>
+    </header>
+
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search tabs or tags...">
+      <div id="tagFilter" class="tag-filter"></div>
+    </div>
+
+    <div class="tabs-container" id="tabsList"></div>
+
+    <div id="addTabModal" class="modal">
+      <div class="modal-content">
+        <h2>Save Tab</h2>
+        <form id="addTabForm">
+          <div class="form-group">
+            <label for="tabTitle">Title</label>
+            <input type="text" id="tabTitle" required>
+          </div>
+          <div class="form-group">
+            <label for="tabUrl">URL</label>
+            <input type="url" id="tabUrl" required>
+          </div>
+          <div class="form-group">
+            <label for="tabTags">Tags (comma-separated)</label>
+            <input type="text" id="tabTags" placeholder="work, research, reading">
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn secondary" id="cancelAdd">Cancel</button>
+            <button type="submit" class="btn primary">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="storage.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
